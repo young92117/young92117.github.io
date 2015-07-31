@@ -4,6 +4,21 @@
 		<title>Young Lee, Software Developer</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script type="text/javascript">
+  			$(document).ready(function() {
+  		    		// Copy all the links in html and display in the bottom with new heading
+		    		$('<h2 id="linksUsed">Links used:</h2>').insertAfter('#faq');    // new haeading is added
+		    		$('<div id="links"></div>').insertAfter('#linksUsed');           // div section is added
+    		    		$('a').each( function() {                                        // clone all the links in the html
+      					$(this).clone().append('<br>').appendTo('#links');       
+    		    		});
+
+    		   		// chage the attribute of link element to open new tab in browser
+    		   		$("a").attr("target" , "new");
+    
+			}); //end ready
+		</script>  
 	</head>
 	<body>
 		<nav>
@@ -26,5 +41,50 @@
         		<li><a href="https://github.com/young92117">github.com/young92117</a></li>
 			</ul>
 		</footer>
+		
+		 <section id="faq">
+     
+    <div>
+    <h2> What is jQuery?</h2>
+     <p>jQuery is a JavaScript library intended to make writing JavaScript easier
+      and fun. It was developed to help web developers write and extend JavaScript programs 
+      using using a defined set of methods based on native JavaScript functions. For more information
+      visit <a href="http://www.jquery.com">jQuery.com</a>.
+     </p>
+   </div> 
+      
+    <div>
+    <h2>How did jQuery Begin?</h2>
+     <p>
+     jQuery was developed in 2006 by John Resig, who is still the lead developer. 
+     It is an open source platform, which means that anyone can add to its development 
+     and improvement. It is released under the MIT License or the GNU General Public License (GPL).
+     For more information
+      visit <a href="http://ejohn.org">ejohn.org</a>
+     
+     </p>
+   </div> 
+   
+    <div>
+    <h2>What is the jQuery UI?</h2>
+     <p>
+    jQuery UI provides abstractions for low-level interaction and animation, advanced effects 
+    and high-level, themeable widgets, built on top of the jQuery JavaScript Library, 
+    that you can use to build highly interactive web applications. For more information
+      visit <a href="http://www.jqueryui.com">jQueryui.com</a>
+     </p>
+   </div>
+   
+     <div>
+    <h2>What is Minification?</h2>
+     <p class="content">
+     Minification is  the process of removing all unnecessary characters from source code, 
+     without changing its functionality. These unnecessary characters usually include 
+     white space characters, new line characters, comments, and sometimes block delimiters, 
+     which are used to add readability to the code but are not required for it to execute.
+     </p>
+   </div>
+      
+     </section>
 	</body>
 </html>
