@@ -5,17 +5,19 @@
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		<script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="js/jquery.intelligist.min.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
 
     <script>
-    $(document).ready(function(){
-        $("#demo").intelligist({
-          "1973984": "Welcome to Intelligist",
-          "6e2710495972aabf33dc": "Live CSS preview",
-          "1979034": "Live JS preview"
-        }, { exec: true });
-    }); //end ready  
-		</script>  
+        $.backstretch([
+          "images/pot-holder.jpg",
+          "images/coffee.jpg",
+          "images/dome.jpg"
+        ], {
+            fade: 750,
+            duration: 4000
+        });
+    </script>
+
 	</head>
 	<body>
 		<nav>
@@ -45,6 +47,7 @@
 			</ul>
 		</footer>
 		
+    
 
 	</body>
 </html>
